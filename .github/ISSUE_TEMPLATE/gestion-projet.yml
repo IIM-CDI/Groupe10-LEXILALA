@@ -1,0 +1,71 @@
+name: 📋 Gestion de Projet
+description: Tâche liée à l'organisation et au suivi du projet
+title: "[GESTION] "
+labels: ["gestion de projet"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Nouvelle tâche de gestion de projet
+        
+        Utilisez ce template pour les tâches d'organisation, planification et suivi du projet.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description de la tâche"
+      description: "Décrivez clairement ce qui doit être fait"
+      placeholder: "Ex: Organiser le planning de la semaine, mettre à jour la documentation projet..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: duree
+    attributes:
+      label: "⏱️ Durée estimée"
+      description: "Combien de temps cette tâche devrait-elle prendre ?"
+      options:
+        - "Rapide (< 30 min)"
+        - "Normal (30 min - 2h)"
+        - "Long (> 2h)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulte
+    attributes:
+      label: "🔧 Difficulté technique"
+      description: "Quel est le niveau de complexité ?"
+      options:
+        - "Simple"
+        - "Moyen" 
+        - "Dur"
+    validations:
+      required: true
+
+  - type: input
+    id: story-points
+    attributes:
+      label: "📊 Story Points"
+      description: "Estimation en points de complexité (1-13)"
+      placeholder: "Ex: 3"
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Critères d'acceptance"
+      description: "Comment saurez-vous que cette tâche est terminée ?"
+      placeholder: |
+        - [ ] Critère 1
+        - [ ] Critère 2
+        - [ ] Critère 3
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: "📅 Date limite"
+      description: "Quand cette tâche doit-elle être terminée ?"
+      placeholder: "Ex: jeudi prochain, 25/09/2025"

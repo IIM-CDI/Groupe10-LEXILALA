@@ -1,0 +1,61 @@
+name: 📚 Documentation
+description: Tâche liée à la documentation du projet
+title: "[DOC] "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📚 Nouvelle tâche de Documentation
+        
+        Utilisez ce template pour toutes les tâches de documentation.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description de la documentation"
+      description: "Quel type de documentation doit être créé ou mis à jour ?"
+      placeholder: "Ex: Rédiger le README, documenter l'API, créer un guide utilisateur..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: duree
+    attributes:
+      label: "⏱️ Durée estimée"
+      options:
+        - "Rapide (< 30 min)"
+        - "Normal (30 min - 2h)"
+        - "Long (> 2h)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulte
+    attributes:
+      label: "🔧 Difficulté technique"
+      options:
+        - "Simple"
+        - "Moyen" 
+        - "Dur"
+    validations:
+      required: true
+
+  - type: input
+    id: story-points
+    attributes:
+      label: "📊 Story Points"
+      placeholder: "Ex: 2"
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Critères d'acceptance"
+      placeholder: |
+        - [ ] Documentation claire et compréhensible
+        - [ ] Exemples de code inclus
+        - [ ] Captures d'écran si nécessaire
+        - [ ] Relecture par l'équipe
+    validations:
+      required: true

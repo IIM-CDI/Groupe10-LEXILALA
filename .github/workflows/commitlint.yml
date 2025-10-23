@@ -1,0 +1,44 @@
+name: 🔍 Validate Commit Messages
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  commitlint:
+    name: Validate Commit Messages
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔍 Validate commit message starts with allowed type
+        run: |
+          # Get commit messages to validate
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            COMMITS=$(git log --format="%s" ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }})
+          else
+            COMMITS=$(git log --format="%s" -1)
+          fi
+          
+          # Allowed types
+          ALLOWED_TYPES="feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert"
+          
+          # Validate each commit
+          echo "$COMMITS" | while read -r commit_msg; do
+            if [ -n "$commit_msg" ]; then
+              first_word=$(echo "$commit_msg" | cut -d' ' -f1 | cut -d'(' -f1 | cut -d':' -f1)
+              if echo "$first_word" | grep -qE "^($ALLOWED_TYPES)$"; then
+                echo "✅ Valid: $commit_msg"
+              else
+                echo "❌ Invalid: $commit_msg"
+                echo "First word '$first_word' is not in allowed types: $ALLOWED_TYPES"
+                exit 1
+              fi
+            fi
+          done

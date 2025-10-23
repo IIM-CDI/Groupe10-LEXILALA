@@ -1,0 +1,61 @@
+name: ⚙️ Back-End
+description: Tâche liée au serveur, API ou base de données
+title: "[BACK] "
+labels: ["back-end"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙️ Nouvelle tâche Back-End
+        
+        Utilisez ce template pour les tâches côté serveur, API et base de données.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description de la fonctionnalité"
+      description: "Décrivez ce qui doit être implémenté côté back-end"
+      placeholder: "Ex: Créer une API pour l'authentification, configurer la base de données..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: duree
+    attributes:
+      label: "⏱️ Durée estimée"
+      options:
+        - "Rapide (< 30 min)"
+        - "Normal (30 min - 2h)"
+        - "Long (> 2h)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulte
+    attributes:
+      label: "🔧 Difficulté technique"
+      options:
+        - "Simple"
+        - "Moyen" 
+        - "Dur"
+    validations:
+      required: true
+
+  - type: input
+    id: story-points
+    attributes:
+      label: "📊 Story Points"
+      placeholder: "Ex: 8"
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Critères d'acceptance"
+      placeholder: |
+        - [ ] Les endpoints répondent correctement
+        - [ ] Les données sont validées
+        - [ ] Tests unitaires écrits
+        - [ ] Documentation mise à jour
+    validations:
+      required: true
