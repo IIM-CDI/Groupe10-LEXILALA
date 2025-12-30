@@ -1,0 +1,15 @@
+{
+    "name": "evabo/lexilala",
+    "autoload": {
+        "psr-4": {
+            "Evabo\\Lexilala\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "EvaBouala",
+            "email": "eva.bouala@edu.devinci.fr"
+        }
+    ],
+    "require": {}
+}

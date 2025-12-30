@@ -1,0 +1,17 @@
+{
+  "name": "lexilala",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch assets/scss:assets/dist",
+    "build": "sass assets/scss:assets/dist --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.97.1"
+  }
+}
