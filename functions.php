@@ -125,3 +125,15 @@ if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 if ( class_exists( 'ACF' ) ) {
 	require_once WP_B2_THEME_DIR . '/inc/acf-config.php';
 }
+function contact_page_styles() {
+    if (is_page_template('page-contact.php')) {
+        wp_enqueue_style(
+            'contact-css',
+            get_template_directory_uri() . '/assets/css/contact.css',
+            [],
+            '1.0'
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'contact_page_styles');
+
