@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="home">
+<!-- <main class="home">
 
   <section class="home-hero">
     <div class="hero-container">
@@ -53,8 +53,8 @@
         </div>
 
         <div class="how-card">
-          <!-- future image  slider -->
-        </div>
+          <!-- future image slider -->
+        <!-- </div>
       </div>
 
       <div class="how-arrows">
@@ -63,8 +63,29 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
+<!-- 
+</main> -->
 
-</main>
+<?php get_header(); ?>
+<main>
+    <?php
+        $query = new WP_Query(array(
+            'post_type' => 'accueil',
+            'p' => 25, // ID du post "Accueil"
+        ));
+
+        if ($query->have_posts()):
+            while ($query->have_posts()):
+                $query->the_post();
+                // the_title('<h2>', '</h2>');
+                the_content();
+            endwhile;
+        endif;
+
+        wp_reset_postdata();
+        ?>
+</main> 
 
 <?php get_footer(); ?>
+
