@@ -1,0 +1,114 @@
+# Configuration du Projet BAP-Template
+# Ce fichier décrit la structure du projet GitHub à créer
+
+project_name: "BAP-Template-projet"
+description: "Template de projet adapté aux Blocs d'Apprentissage Projet (BAP) pour étudiants de 2ème année"
+
+# Structure des colonnes
+columns:
+  - name: "📋 Toutes les tâches"
+    description: "Vue d'ensemble de toutes les tâches du projet"
+    automation: "todo"
+    
+  - name: "📅 Pour jeudi prochain"
+    description: "Objectifs prioritaires à court terme"
+    automation: "todo"
+    
+  - name: "🎯 TO DO aujourd'hui"
+    description: "Focus du jour - tâches à réaliser immédiatement"
+    automation: "todo"
+    
+  - name: "🔄 En cours"
+    description: "Tâches actuellement en développement"
+    automation: "in_progress"
+    
+  - name: "👀 Review"
+    description: "Tâches en cours de révision"
+    automation: "in_review"
+    
+  - name: "✅ Fini aujourd'hui"
+    description: "Accomplissements de la journée"
+    automation: "done"
+    
+  - name: "🏆 Tâches finies du projet"
+    description: "Historique complet des tâches terminées"
+    automation: "done"
+
+# Custom Fields
+custom_fields:
+  - name: "Story Points"
+    type: "number"
+    description: "Estimation de la complexité globale (échelle 1-13)"
+    
+  - name: "Durée"
+    type: "single_select"
+    description: "Estimation du temps nécessaire"
+    options:
+      - "Rapide (< 30 min)"
+      - "Normal (30 min - 2h)"
+      - "Long (> 2h)"
+      
+  - name: "Difficulté technique"
+    type: "single_select"
+    description: "Niveau de complexité technique"
+    options:
+      - "Simple"
+      - "Moyen"
+      - "Dur"
+      
+  - name: "Date de début"
+    type: "date"
+    description: "Date de commencement de la tâche"
+    
+  - name: "Date de fin"
+    type: "date"
+    description: "Date limite ou de finalisation"
+
+# Labels prédéfinis
+labels:
+  - name: "gestion de projet"
+    color: "0052CC"
+    description: "Organisation, planification, suivi du projet"
+    
+  - name: "front-end"
+    color: "FF6B6B"
+    description: "Interface utilisateur, UX/UI"
+    
+  - name: "back-end"
+    color: "4ECDC4"
+    description: "Serveur, API, base de données"
+    
+  - name: "documentation"
+    color: "45B7D1"
+    description: "README, guides, commentaires de code"
+    
+  - name: "iot"
+    color: "96CEB4"
+    description: "Internet des objets, capteurs, hardware"
+
+# Templates d'issues disponibles
+issue_templates:
+  - "gestion-projet.yml"
+  - "front-end.yml"
+  - "back-end.yml"
+  - "documentation.yml"
+  - "iot.yml"
+
+# Workflows recommandés
+workflows:
+  daily_standup:
+    - "Qu'est-ce que j'ai fait hier ?"
+    - "Qu'est-ce que je vais faire aujourd'hui ?"
+    - "Y a-t-il des blocages ?"
+    
+  sprint_planning:
+    - "Estimer en story points"
+    - "Définir la durée et difficulté"
+    - "Assigner les tâches"
+    - "Fixer les dates"
+    
+  definition_of_done:
+    - "Code développé et testé"
+    - "Documentation mise à jour"
+    - "Review effectuée par un pair"
+    - "Déploiement validé"

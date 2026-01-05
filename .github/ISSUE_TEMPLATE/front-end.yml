@@ -1,0 +1,61 @@
+name: 🎨 Front-End
+description: Tâche liée à l'interface utilisateur et UX/UI
+title: "[FRONT] "
+labels: ["front-end"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎨 Nouvelle tâche Front-End
+        
+        Utilisez ce template pour toutes les tâches liées à l'interface utilisateur.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description de la fonctionnalité"
+      description: "Décrivez la fonctionnalité à implémenter côté front-end"
+      placeholder: "Ex: Créer la page de connexion, ajouter un bouton de navigation..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: duree
+    attributes:
+      label: "⏱️ Durée estimée"
+      options:
+        - "Rapide (< 30 min)"
+        - "Normal (30 min - 2h)"
+        - "Long (> 2h)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulte
+    attributes:
+      label: "🔧 Difficulté technique"
+      options:
+        - "Simple"
+        - "Moyen" 
+        - "Dur"
+    validations:
+      required: true
+
+  - type: input
+    id: story-points
+    attributes:
+      label: "📊 Story Points"
+      placeholder: "Ex: 5"
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Critères d'acceptance"
+      placeholder: |
+        - [ ] L'interface est responsive
+        - [ ] Les interactions fonctionnent correctement
+        - [ ] Le design respecte la maquette
+        - [ ] Tests utilisateur validés
+    validations:
+      required: true

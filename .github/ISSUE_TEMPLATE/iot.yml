@@ -1,0 +1,72 @@
+name: 🔌 IoT
+description: Tâche liée à l'Internet des objets, capteurs et hardware
+title: "[IOT] "
+labels: ["iot"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔌 Nouvelle tâche IoT
+        
+        Utilisez ce template pour les tâches liées aux objets connectés, capteurs et hardware.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description de la tâche IoT"
+      description: "Décrivez ce qui doit être implémenté au niveau hardware/IoT"
+      placeholder: "Ex: Connecter un capteur de température, programmer un Arduino..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: duree
+    attributes:
+      label: "⏱️ Durée estimée"
+      options:
+        - "Rapide (< 30 min)"
+        - "Normal (30 min - 2h)"
+        - "Long (> 2h)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulte
+    attributes:
+      label: "🔧 Difficulté technique"
+      options:
+        - "Simple"
+        - "Moyen" 
+        - "Dur"
+    validations:
+      required: true
+
+  - type: input
+    id: story-points
+    attributes:
+      label: "📊 Story Points"
+      placeholder: "Ex: 5"
+
+  - type: textarea
+    id: materiel
+    attributes:
+      label: "🛠️ Matériel nécessaire"
+      description: "Quel hardware est requis pour cette tâche ?"
+      placeholder: |
+        - Arduino Uno
+        - Capteur DHT22
+        - Module WiFi ESP8266
+        - Résistances, breadboard, etc.
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Critères d'acceptance"
+      placeholder: |
+        - [ ] Le capteur fonctionne correctement
+        - [ ] Les données sont transmises
+        - [ ] Le code est documenté
+        - [ ] Tests physiques réalisés
+    validations:
+      required: true
