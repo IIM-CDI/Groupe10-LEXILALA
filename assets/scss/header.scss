@@ -1,10 +1,10 @@
 .site-header {
   width: 100%;
   background: #fff;
-  padding: 20px 0; // px uniquement
+  padding: 20px 0; 
 
   .header-container {
-    background-color: blueviolet;
+    background-color: #fff;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 40px;
@@ -28,23 +28,24 @@
   /* NAV PRINCIPALE */
   .site-navigation {
     background-color: #839c16;
-    // background: #fff;
-    border-radius: 16px;
+    border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    margin-left: 180px;
 
     .nav-menu {
       list-style: none;
       display: flex;
       gap: 40px;
       background-color: #fff;
-      padding: 16px 40px;
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
+      padding: 20px 40px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
       margin-bottom: 0;
 
       > .menu-item > a {
         text-decoration: none;
-        font-size: 16px;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 18px;
         font-weight: 600;
         color: #2b2b2b;
         position: relative;
@@ -74,17 +75,22 @@
 
   .language-switch {
     background: #839c16;
-    border-radius: 16px;
+    border-radius: 10px;
     font-weight: 600;
+    font-size: 18px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     cursor: pointer;
+    margin-right: 50px;
+    
 
     .lang {
-      background-color: aqua;
-      padding: 16px 24px;
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
+      background-color: #fff;
+      padding: 20px 60px;
+      margin-top: 16px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      font-family: "Noto Sans", sans-serif;
     }
   }
 }

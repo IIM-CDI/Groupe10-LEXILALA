@@ -1,0 +1,143 @@
+.site-footer {
+  width: 100%;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* NEWSLETTER */
+.footer-newsletter {
+  background-color: #839c16;
+  padding: 80px 40px;
+  color: #fff;
+  text-align: center;
+
+  .newsletter-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 24px;
+  }
+
+  .form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    label {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select {
+      height: 48px;
+      border-radius: 8px;
+      border: none;
+      padding: 0 16px;
+      font-size: 16px;
+    }
+  }
+
+  .form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .newsletter-button {
+    align-self: center;
+    background: #a8c61a;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+/* SOCIAL */
+.footer-social {
+  background: #fff;
+  padding: 32px 0;
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+
+    a {
+      color: #839c16;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
+
+/* FOOTER MAIN */
+.footer-main {
+  background: #f4f4eb;
+  padding: 80px 40px;
+
+  .footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+  }
+
+  .footer-brand {
+    max-width: 320px;
+
+    img {
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+
+  .footer-column {
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 12px;
+
+        a {
+          text-decoration: none;
+          color: #2b2b2b;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
