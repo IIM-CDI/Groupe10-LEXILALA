@@ -42,3 +42,13 @@ function lexilala_primary_menu_fallback() {
   }
   echo '</ul>';
 }
+
+function lexilala_enqueue_fonts() {
+  wp_enqueue_style(
+    'noto-sans-font',
+    'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap',
+    array(),
+    null
+  );
+}
+add_action( 'wp_enqueue_scripts', 'lexilala_enqueue_fonts' );
