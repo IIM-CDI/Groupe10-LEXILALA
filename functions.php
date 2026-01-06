@@ -42,6 +42,24 @@ function lexilala_primary_menu_fallback() {
   }
   echo '</ul>';
 }
+register_nav_menus([
+  'primary' => 'Menu principal',
+  'footer'  => 'Menu footer',
+]);
+function lexilala_register_mot_cpt() {
+  register_post_type('mot', array(
+    'labels' => array(
+      'name' => 'Mots',
+      'singular_name' => 'Mot',
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-translation',
+    'supports' => array('title', 'thumbnail'),
+    'rewrite' => array('slug' => 'mot'),
+  ));
+}
+add_action('init', 'lexilala_register_mot_cpt');
 function contact_page_styles() {
     if (is_page_template('page-contact.php')) {
         wp_enqueue_style(

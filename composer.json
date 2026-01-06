@@ -11,5 +11,10 @@
             "email": "eva.bouala@edu.devinci.fr"
         }
     ],
-    "require": {}
+    "require": {},
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }
