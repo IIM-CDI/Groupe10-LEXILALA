@@ -1,14 +1,10 @@
-/* RESET MINIMAL */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: #222;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/*HEADER*/
 .site-header {
   width: 100%;
   background: #fff;
@@ -19,7 +15,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 20px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,14 +45,18 @@ body {
   color: #7da600;
 }
 
-/* =========================
-   PAGE MOT
-========================= */
-
+/*PAGE MOT*/
 .mot-page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 20px;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .mot-title {
@@ -102,12 +101,13 @@ body {
 
 .mot-texte {
   font-size: 16px;
+  background-color: #111111;
+  padding: 10px 15px;
+  border-radius: 8px;
+  flex: 1;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER*/
 .site-footer {
   background: #f7f7f7;
   margin-top: 80px;
@@ -117,7 +117,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,14 +151,14 @@ body {
   .mot-wrapper {
     grid-template-columns: 1fr;
   }
-
   .mot-title {
     font-size: 36px;
   }
-
   .header-inner,
   .footer-inner {
     flex-direction: column;
     gap: 15px;
   }
 }
+
+/*# sourceMappingURL=traduction.css.map */

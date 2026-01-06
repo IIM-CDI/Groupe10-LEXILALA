@@ -642,9 +642,13 @@
     "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
+<<<<<<< HEAD
+    "platform": {},
+=======
     "platform": {
         "php": ">=7.4"
     },
+>>>>>>> 5ab4e0d69fa75de2924071b778b13c49f919427f
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
