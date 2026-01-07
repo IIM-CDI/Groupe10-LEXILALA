@@ -1,0 +1,150 @@
+.page-mots {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #f4f4eb;
+  min-height: 100vh;
+}
+
+.mots-hero {
+  background-color: #fff;
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+.mots-hero h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.search-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.search-container .search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  border: 2px solid #839c16;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.search-container .search-input:focus {
+  border-color: #a8c61a;
+}
+.search-container .search-input::placeholder {
+  color: #999;
+}
+.search-container .search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #839c16;
+  pointer-events: none;
+}
+
+.mots-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.mots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mot-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.mot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.mot-card::before {
+  content: "";
+  display: block;
+  height: 20px;
+  background-color: #839c16;
+  border-radius: 12px 12px 0 0;
+}
+.mot-card .mot-image {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #fff;
+}
+.mot-card .mot-image img {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+}
+.mot-card .mot-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  padding: 15px 20px 20px;
+  line-height: 1.4;
+  border-top: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 60px 20px;
+}
+
+@media (max-width: 768px) {
+  .mots-hero h1 {
+    font-size: 36px;
+  }
+  .mots-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  .mot-card .mot-image {
+    min-height: 150px;
+    padding: 15px;
+  }
+  .mot-card .mot-image img {
+    max-height: 130px;
+  }
+  .mot-card .mot-label {
+    font-size: 14px;
+    padding: 12px 15px 15px;
+  }
+}
+@media (max-width: 480px) {
+  .mots-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  .mot-card .mot-image {
+    min-height: 120px;
+  }
+  .mot-card .mot-image img {
+    max-height: 100px;
+  }
+}
+
+/*# sourceMappingURL=page-mots.css.map */
