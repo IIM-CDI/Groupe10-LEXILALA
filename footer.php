@@ -4,7 +4,7 @@
     <div class="newsletter-container">
 
       <h2>
-        Abonnez-vous à Lexilala pour ne rien manquer<br>
+        Abonnez-vous à Dulala pour ne rien manquer<br>
         sur les nouveautés
       </h2>
 
