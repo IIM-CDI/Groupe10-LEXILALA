@@ -59,6 +59,21 @@ function lexilala_register_mot_cpt() {
     'rewrite' => array('slug' => 'mot'),
   ));
 }
+function lexila_enqueue_traduction_styles() {
+
+    if (is_singular('traduction')) {
+        wp_enqueue_style(
+            'lexila-traduction-style',
+            get_template_directory_uri() . '/assets/css/traduction.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
+
+}
+add_action('wp_enqueue_scripts', 'lexila_enqueue_traduction_styles');
+
 add_action('init', 'lexilala_register_mot_cpt');
 function contact_page_styles() {
     if (is_page_template('page-contact.php')) {

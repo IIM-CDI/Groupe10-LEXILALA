@@ -1,50 +1,44 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
-<main class="mot-page">
+<main id="primary" class="site-main">
 
-  <?php while ( have_posts() ) : the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
 
-    <h1 class="mot-title"><?php the_title(); ?></h1>
+<article <?php post_class(); ?>>
 
-    <div class="mot-wrapper">
+    <div class="mot-page">
 
-      <!-- Image -->
-      <div class="mot-image">
-        <?php if ( has_post_thumbnail() ) : ?>
-          <?php the_post_thumbnail('large'); ?>
-        <?php endif; ?>
-      </div>
+        <!-- TITRE -->
+        <h1 class="mot-title"><?php the_title(); ?></h1>
 
-      <!-- Traductions -->
-      <div class="mot-content">
+        <!-- CONTENU ET IMAGE -->
+        <div class="mot-wrapper">
 
-        <?php
-        $traductions = get_post_meta( get_the_ID(), 'traductions', true );
-        ?>
+            <!-- IMAGE À LA UNE -->
+            <div class="mot-image">
+                <?php
+                if ( has_post_thumbnail() ) {
+                    the_post_thumbnail( 'large' );
+                }
+                ?>
+            </div>
 
-        <?php if ( ! empty( $traductions ) && is_array( $traductions ) ) : ?>
-          <ul class="mot-traductions">
-            <?php foreach ( $traductions as $traduction ) : ?>
-              <li class="mot-traduction">
-                <span class="mot-langue">
-                  <?php echo esc_html( $traduction['langue'] ); ?>
-                </span>
-                <span class="mot-texte">
-                  <?php echo esc_html( $traduction['texte'] ); ?>
-                </span>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-        <?php else : ?>
-          <p>Aucune traduction disponible.</p>
-        <?php endif; ?>
+            <!-- CONTENU / TRADUCTIONS -->
+            <div class="mot-contenu">
+                <?php the_content(); ?>
+            </div>
 
-      </div>
+        </div>
 
     </div>
 
-  <?php endwhile; ?>
+</article>
+
+<?php endwhile; ?>
 
 </main>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

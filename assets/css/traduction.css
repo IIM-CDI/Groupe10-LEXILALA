@@ -1,10 +1,5 @@
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #222;
-}
+/* HEADER */
 
-/*HEADER*/
 .site-header {
   width: 100%;
   background: #fff;
@@ -45,7 +40,8 @@ body {
   color: #7da600;
 }
 
-/*PAGE MOT*/
+/* PAGE MOT */
+
 .mot-page {
   max-width: 1100px;
   margin: 0 auto;
@@ -64,50 +60,88 @@ h1 {
   font-size: 48px;
   margin-bottom: 50px;
 }
-
-.mot-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+.colonne-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #f1f2e8;
 }
 
-.mot-image img {
+.mot-image {
   width: 100%;
   border-radius: 20px;
+  display: block;
+  margin: 40px 40px 40px 40px;
+}
+.mot-signe {
+  font-family: noto-sans, sans-serif;
+  font-size: 18px;
+  margin-top: -20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.mot-pdf {
+  font-family: noto-sans, sans-serif;
+  font-size: 18px;
+  margin-top: -10px;
+  margin-bottom: 50px;
+  text-decoration: none;
+  color: #7da600;
+  text-align: center;
+}
+/* Colonnes Gutenberg : alignement parfait */
+.wp-block-columns {
+  display: flex;
+  align-items: center; /* même hauteur */
+}
+.wp-block-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.wp-block-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .mot-traductions {
+  font-family: noto-sans, sans-serif;
+  font-size: 19px;
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.mot-traduction {
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
 }
 
-.mot-langue {
+.wp-block-button.mot-langue {
   background: #7da600;
+  font-family: noto-sans, sans-serif;
+  font-size: 12px;
   color: #fff;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-right: 12px;
+  width: 75px;
+  height: 22px;
+  opacity: 1;
+  border-radius: 30px;
+  border-width: 1px;
+
   white-space: nowrap;
 }
 
 .mot-texte {
-  font-size: 16px;
-  background-color: #111111;
+  font-family: noto-sans, sans-serif;
+  font-size: 19px;
+  width: 150px;
+  height: 35px;
+  opacity: 1;
   padding: 10px 15px;
   border-radius: 8px;
   flex: 1;
 }
 
-/* FOOTER*/
+/* FOOTER */
+
 .site-footer {
   background: #f7f7f7;
   margin-top: 80px;
@@ -151,9 +185,11 @@ h1 {
   .mot-wrapper {
     grid-template-columns: 1fr;
   }
+
   .mot-title {
     font-size: 36px;
   }
+
   .header-inner,
   .footer-inner {
     flex-direction: column;
@@ -161,4 +197,22 @@ h1 {
   }
 }
 
-/*# sourceMappingURL=traduction.css.map */
+@media (max-width: 480px) {
+  .mot-page {
+    padding: 20px;
+  }
+
+  .mot-texte {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .mot-langue {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .mot-wrapper {
+    gap: 20px;
+  }
+}
