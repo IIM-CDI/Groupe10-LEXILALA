@@ -15,8 +15,13 @@ $words = $wpdb->get_results("SELECT id, word, image_path FROM words ORDER BY wor
   <div class="mots-hero">
     <h1>Les mots</h1>
     <div class="search-container">
+      <span class="search-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8" stroke="#839c16" stroke-width="2"/>
+          <path d="M21 21L16.65 16.65" stroke="#839c16" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
       <input type="text" id="search-mots" class="search-input" placeholder="Rechercher un mot">
-      <span class="search-icon">🔍</span>
     </div>
   </div>
 

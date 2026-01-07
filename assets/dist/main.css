@@ -16,9 +16,12 @@
   /* LOGO */
 }
 .site-header .site-branding {
-  max-width: 280px;
+  max-width: 200px;
 }
-.site-header .site-branding img {
+.site-header .site-branding a {
+  display: block;
+}
+.site-header .site-branding .site-logo {
   width: 100%;
   height: auto;
   display: block;
@@ -30,7 +33,6 @@
   background-color: #839c16;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  margin-left: 180px;
 }
 .site-header .site-navigation .nav-menu {
   list-style: none;
@@ -38,20 +40,24 @@
   gap: 40px;
   background-color: #fff;
   padding: 20px 40px;
+  margin: 16px 0 0 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  margin-bottom: 0;
 }
-.site-header .site-navigation .nav-menu > .menu-item > a {
+.site-header .site-navigation .nav-menu li {
+  margin: 0;
+}
+.site-header .site-navigation .nav-menu li a {
   text-decoration: none;
   font-family: "Noto Sans", sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   color: #2b2b2b;
   position: relative;
   padding-bottom: 6px;
+  transition: color 0.3s;
 }
-.site-header .site-navigation .nav-menu > .menu-item > a::after {
+.site-header .site-navigation .nav-menu li a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -61,29 +67,86 @@
   background: #839c16;
   transition: width 0.25s ease;
 }
-.site-header .site-navigation .nav-menu > .menu-item > a:hover::after {
-  width: 100%;
-}
-.site-header .site-navigation .nav-menu .current-menu-item > a {
+.site-header .site-navigation .nav-menu li a:hover {
   color: #839c16;
 }
+.site-header .site-navigation .nav-menu li a:hover::after {
+  width: 100%;
+}
+.site-header {
+  /* LANGUAGE SWITCH */
+}
 .site-header .language-switch {
+  position: relative;
   background: #839c16;
   border-radius: 10px;
-  font-weight: 600;
-  font-size: 18px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  cursor: pointer;
-  margin-right: 50px;
 }
-.site-header .language-switch .lang {
-  background-color: #fff;
-  padding: 20px 60px;
-  margin-top: 16px;
+.site-header .language-switch .lang-toggle {
+  background: #fff;
+  border: none;
+  border-radius: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding: 20px 40px;
+  margin-top: 16px;
   font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2b2b2b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  width: 100%;
+}
+.site-header .language-switch .lang-toggle .arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+.site-header .language-switch .lang-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 150px;
+  max-height: 300px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+  z-index: 1000;
+  display: none;
+}
+.site-header .language-switch .lang-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block;
+}
+.site-header .language-switch .lang-dropdown li {
+  margin: 0;
+}
+.site-header .language-switch .lang-dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  color: #2b2b2b;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+.site-header .language-switch .lang-dropdown li a:hover {
+  background-color: #f5f5f5;
 }
 
 @media (max-width: 1024px) {
@@ -396,37 +459,45 @@ select {
   font-weight: 400;
   color: #333;
   margin-bottom: 30px;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .search-container {
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .search-container .search-input {
   width: 100%;
-  padding: 15px 50px 15px 20px;
-  border: 2px solid #839c16;
+  padding: 20px 30px 20px 70px;
+  border: 4px solid #839c16;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Noto Sans", sans-serif;
   outline: none;
   transition: border-color 0.3s;
+  background-color: white;
 }
 .search-container .search-input:focus {
   border-color: #a8c61a;
 }
 .search-container .search-input::placeholder {
   color: #999;
+  font-family: "Noto Sans", sans-serif;
 }
 .search-container .search-icon {
   position: absolute;
-  right: 20px;
+  left: 25px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
-  color: #839c16;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-container .search-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .mots-content {
@@ -528,5 +599,3 @@ select {
     max-height: 100px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

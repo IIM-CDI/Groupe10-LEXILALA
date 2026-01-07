@@ -14,11 +14,21 @@ if ( ! function_exists( 'lexilala_setup' ) ) {
 }
 
 function theme_enqueue_assets() {
+  // CSS
   wp_enqueue_style(
     'theme-main-style',
     get_template_directory_uri() . '/assets/dist/main.css',
     array(),
     '1.0'
+  );
+  
+  // JavaScript
+  wp_enqueue_script(
+    'theme-header-js',
+    get_template_directory_uri() . '/assets/js/header.js',
+    array(),
+    '1.0',
+    true
   );
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_assets' );
@@ -41,6 +51,52 @@ function lexilala_primary_menu_fallback() {
     printf( '<li><a href="%s">%s</a></li>', esc_url( $link ), esc_html( $name ) );
   }
   echo '</ul>';
+}
+
+/**
+ * Get available languages from database
+ */
+function lexilala_get_languages() {
+  global $wpdb;
+  
+  $languages = wp_cache_get('lexilala_languages');
+  
+  if (false === $languages) {
+    $languages = $wpdb->get_results(
+      "SELECT id, name FROM languages ORDER BY name ASC"
+    );
+    wp_cache_set('lexilala_languages', $languages, '', 3600);
+  }
+  
+  return $languages ? $languages : array();
+}
+
+/**
+ * Get default menu items if no menu is assigned
+ */
+function lexilala_get_default_menu_items() {
+  return array(
+    array(
+      'url' => home_url('/mots/'),
+      'title' => __('Les mots', 'lexilala')
+    ),
+    array(
+      'url' => home_url('/jeux/'),
+      'title' => __('Jeux', 'lexilala')
+    ),
+    array(
+      'url' => home_url('/ressources/'),
+      'title' => __('Ressources', 'lexilala')
+    ),
+    array(
+      'url' => home_url('/a-propos/'),
+      'title' => __('A propos', 'lexilala')
+    ),
+    array(
+      'url' => home_url('/contact/'),
+      'title' => __('Contact', 'lexilala')
+    ),
+  );
 }
 
 function lexilala_enqueue_fonts() {
