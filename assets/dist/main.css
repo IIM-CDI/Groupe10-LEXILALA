@@ -12,9 +12,6 @@
   align-items: center;
   justify-content: space-between;
 }
-.site-header {
-  /* LOGO */
-}
 .site-header .site-branding {
   max-width: 280px;
 }
@@ -22,9 +19,6 @@
   width: 100%;
   height: auto;
   display: block;
-}
-.site-header {
-  /* NAV PRINCIPALE */
 }
 .site-header .site-navigation {
   background-color: #839c16;
@@ -85,6 +79,9 @@
   border-bottom-right-radius: 10px;
   font-family: "Noto Sans", sans-serif;
 }
+.site-header .language-switch .lang .arrow {
+  margin-left: 10px;
+}
 
 @media (max-width: 1024px) {
   .site-header .header-container {
@@ -100,9 +97,9 @@
 .site-footer {
   width: 100%;
   font-family: "Noto Sans", sans-serif;
+  margin: 0;
 }
 
-/* NEWSLETTER */
 .footer-newsletter {
   background-color: #839c16;
   padding: 80px 40px;
@@ -162,9 +159,17 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.footer-newsletter .newsletter-button:hover {
+  background: #96b116;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.footer-newsletter .newsletter-button:active {
+  transform: scale(0.98);
 }
 
-/* SOCIAL */
 .footer-social {
   background: #fff;
   padding: 32px 0;
@@ -174,13 +179,7 @@
   justify-content: center;
   gap: 32px;
 }
-.footer-social .social-icons a {
-  color: #839c16;
-  font-weight: 600;
-  text-decoration: none;
-}
 
-/* FOOTER MAIN */
 .footer-main {
   background: #f4f4eb;
   padding: 80px 40px;
@@ -189,7 +188,7 @@
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
-  gap: 80px;
+  gap: 30px;
 }
 .footer-main .footer-brand {
   max-width: 320px;
@@ -199,17 +198,22 @@
 }
 .footer-main .footer-brand p {
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 20px;
+}
+.footer-main .footer-column {
+  padding-left: 50px;
+  flex: 1;
 }
 .footer-main .footer-column h4 {
   font-size: 16px;
   font-weight: 600;
+  margin-left: 117px;
   margin-bottom: 16px;
 }
 .footer-main .footer-column ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: 117px;
 }
 .footer-main .footer-column ul li {
   margin-bottom: 12px;
@@ -220,79 +224,88 @@
   font-size: 14px;
 }
 
-.home {
+main {
   font-family: "Noto Sans", sans-serif;
+  color: black;
 }
 
-/* HERO */
-.home-hero {
-  background: #fff;
-  padding: 120px 40px 80px;
+.wp-block-image {
+  align-items: center;
 }
-.home-hero .hero-container {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-.home-hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-.home-hero .hero-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 48px;
-}
-.home-hero .hero-search {
-  max-width: 700px;
-  margin: 0 auto;
-}
-.home-hero .hero-search input {
-  width: 100%;
-  height: 56px;
-  border-radius: 28px;
-  border: 3px solid #839c16;
-  padding: 0 24px;
-  font-size: 16px;
+.wp-block-image .wp-image-29 {
+  width: 424px;
+  height: 106px;
+  margin-top: 50px;
+  margin-left: 622px;
 }
 
-/* COMMENT UTILISER */
-.home-how {
-  background: #f4f4eb;
-  padding: 100px 40px;
-}
-.home-how .how-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.home-how h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 64px;
-}
-.home-how .how-content {
-  display: flex;
-  gap: 80px;
-}
-.home-how .how-text {
-  flex: 1;
+.has-text-align-center {
+  color: black;
+  width: 710px;
+  margin-top: 30px;
+  margin-left: 490px;
   font-size: 15px;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 28px;
 }
-.home-how .how-card {
-  width: 420px;
-  height: 280px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+.has-text-align-center strong {
+  color: #839c16;
 }
-.home-how .how-arrows {
-  margin-top: 32px;
+
+.wp-block-search {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 1000px;
+  height: 61px;
+  margin-left: 350px;
+}
+.wp-block-search .wp-block-search__inside-wrapper {
+  width: 700px;
+  height: 56px;
+  border: 5px solid #a2bf1a;
+  border-radius: 40px;
+  padding: 0 20px;
+  width: 954px;
+  height: 61px;
+  align-items: center;
+}
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding-left: 12px;
+}
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.titre-how-use {
+  background-color: #f1f2e8;
+  font-size: 33px;
+  font-weight: 700;
+  padding: 70px 0 20px 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#texte2 {
+  background-color: #f1f2e8;
+  line-height: 1.6;
+  padding: 50px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#texte2 .conteneur {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

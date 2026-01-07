@@ -12,9 +12,6 @@
   align-items: center;
   justify-content: space-between;
 }
-.site-header {
-  /* LOGO */
-}
 .site-header .site-branding {
   max-width: 280px;
 }
@@ -22,9 +19,6 @@
   width: 100%;
   height: auto;
   display: block;
-}
-.site-header {
-  /* NAV PRINCIPALE */
 }
 .site-header .site-navigation {
   background-color: #839c16;
@@ -84,6 +78,9 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-family: "Noto Sans", sans-serif;
+}
+.site-header .language-switch .lang .arrow {
+  margin-left: 10px;
 }
 
 @media (max-width: 1024px) {

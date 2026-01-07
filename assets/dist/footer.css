@@ -1,9 +1,9 @@
 .site-footer {
   width: 100%;
   font-family: "Noto Sans", sans-serif;
+  margin: 0;
 }
 
-/* NEWSLETTER */
 .footer-newsletter {
   background-color: #839c16;
   padding: 80px 40px;
@@ -63,9 +63,17 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.footer-newsletter .newsletter-button:hover {
+  background: #96b116;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.footer-newsletter .newsletter-button:active {
+  transform: scale(0.98);
 }
 
-/* SOCIAL */
 .footer-social {
   background: #fff;
   padding: 32px 0;
@@ -75,13 +83,7 @@
   justify-content: center;
   gap: 32px;
 }
-.footer-social .social-icons a {
-  color: #839c16;
-  font-weight: 600;
-  text-decoration: none;
-}
 
-/* FOOTER MAIN */
 .footer-main {
   background: #f4f4eb;
   padding: 80px 40px;
@@ -90,7 +92,7 @@
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
-  gap: 80px;
+  gap: 30px;
 }
 .footer-main .footer-brand {
   max-width: 320px;
@@ -100,17 +102,22 @@
 }
 .footer-main .footer-brand p {
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 20px;
+}
+.footer-main .footer-column {
+  padding-left: 50px;
+  flex: 1;
 }
 .footer-main .footer-column h4 {
   font-size: 16px;
   font-weight: 600;
+  margin-left: 117px;
   margin-bottom: 16px;
 }
 .footer-main .footer-column ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: 117px;
 }
 .footer-main .footer-column ul li {
   margin-bottom: 12px;
