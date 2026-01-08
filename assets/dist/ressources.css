@@ -10,5 +10,17 @@ main .wp-block-image .wp-image-73 {
   margin-top: 50px;
   margin-left: 622px;
 }
+main .livres {
+  background-color: white;
+  margin-left: 100px;
+}
+main .education {
+  background-color: white;
+  margin-left: 100px;
+}
+main .documents {
+  background-color: white;
+  margin-left: 100px;
+}
 
 /*# sourceMappingURL=ressources.css.map */

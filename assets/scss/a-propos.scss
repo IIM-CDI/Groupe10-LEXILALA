@@ -1,71 +1,95 @@
 main {
   font-family: "Noto Sans", sans-serif;
-//   background-color: #f1f2e8;
 
-  .wp-block-heading {
-    background-color: #f1f2e8;
+  .wp-block-group {
+    .group-propos {
+      background-color: #f1f2e8;
+      .wp-block-heading {
+        font-size: 40px;
+        font-weight: 700;
+        padding-top: 70px;
+        margin: 0 0 50px;
+        margin-left: 510px;
+        text-align: center;
+      }
+
+      .wp-block-image.dulala,
+      .wp-block-image.kamilala,
+      .wp-block-image.lexilala {
+        display: inline-flex;
+        margin-top: 30px;
+        margin-left: 170px;
+      }
+
+      .dulala,
+      .kamilala,
+      .lexilala {
+        max-height: 120px;
+      }
+
+      .texte1 {
+        max-width: 900px;
+        font-size: 15px;
+        line-height: 26px;
+        margin-left: 410px;
+        margin-top: 80px;
+      }
+
+      .wp-block-image.icare,
+      .wp-block-image.labex {
+        display: inline-flex;
+        margin-top: 110px;
+      }
+
+      .wp-block-image.icare {
+        margin-left: 110px;
+      }
+
+      .wp-block-image.labex {
+        margin-left: 480px;
+      }
+    }
+  }
+
+  /* Styling for the Qui sommes-nous and Remerciements sections */
+
+  .group-apropos {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0px 0px;
+  }
+
+  .wp-block-group__inner-container {
+    width: 100%;
+  }
+
+  /* Remerciements section title */
+  #titre-2 {
     font-size: 40px;
     font-weight: 700;
-    padding-top: 70px;
-    margin-bottom: 50px;
-    margin-right: 100px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  .wp-block-image.dulala,
-  .wp-block-image.kamilala,
-  .wp-block-image.lexilala {
-    background-color: #f1f2e8;
-    display: inline-flex;
-    margin-top: 30px;
-    margin-left: 165px;
+  /* Ensure other possible selectors for title are centered */
+  .titre2,
+  .group-apropos .wp-block-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .dulala,
-  .kamilala,
-  .lexilala {
-    max-height: 120px;
-  }
-
-  .texte1 {
-    background-color: #f1f2e8;
-    max-width: 900px;
+  /* Paragraphs in the section */
+  #paragraphe2 {
     font-size: 15px;
-    line-height: 26px;
-    margin-left: 410px;
-    margin-top: 80px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
   }
 
-  .wp-block-image.icare,
-  .wp-block-image.labex {
-    background-color: #f1f2e8;
-    display: inline-flex;
-    margin-top: 110px;
-  }
-
-  .wp-block-image.icare {
-    margin-left: 110px;
-  }
-
-  .wp-block-image.labex {
-    margin-left: 480px;
-  }
-
-  .titre2 {
-    background-color: white;
-    width: 100%;
-    font-size: 30px;
-    font-weight: 700;
-    margin-top: 100px;
-    margin-left: 500px;
-  }
-
-  .paragraph2 {
-    background-color: white;
-    max-width: 900px;
-    font-size: 15px;
-    line-height: 26px;
+  /* Names section - three column layout */
+  .group-fin-propos {
     margin-top: 50px;
-    margin-left: 410px;
   }
 
   .wp-block-image.rep-fr,
@@ -73,27 +97,8 @@ main {
   .wp-block-image.fonjep,
   .wp-block-image.pierre,
   .wp-block-image.carasso {
-    background-color: white;
     display: inline-flex;
-    margin-top: 80px;
+    margin-top: 0px;
     margin-left: 80px;
-  }
-
-  p {
-    // background-color: white;
-    // display: inline-flex;
-    // line-height: 40px;
-    // margin-left: 250px;
-    // margin-top: 80px;
-    .paragraph3,
-    .paragraph4,
-    .paragraph5 {
-      background-color: white;
-      display: inline-flex;
-    }
-  }
-
-  h1{
-    background-color: white;
   }
 }

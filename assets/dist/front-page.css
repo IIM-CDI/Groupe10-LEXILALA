@@ -58,11 +58,7 @@ main {
   cursor: pointer;
 }
 
-.wp-block-group {
-  background-color: #f1f2e8;
-}
 .wp-block-group .titre-how-use {
-  background-color: #f1f2e8;
   font-size: 33px;
   font-weight: 700;
   padding: 70px 0 20px 0;
@@ -70,17 +66,28 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-.wp-block-group #texte2 {
-  background-color: #f1f2e8;
-  line-height: 1.6;
-  padding: 50px;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
+.wp-block-group .wp-block-group__inner-container {
+  padding-bottom: 50px;
 }
-.wp-block-group #texte2 .conteneur {
-  max-width: 800px;
-  margin: 0 auto;
+.wp-block-group .wp-block-group__inner-container .wp-block-columns {
+  margin-top: 40px;
+  margin-left: 150px;
+  width: 1194px;
+  height: 378px;
+}
+.wp-block-group .wp-block-group__inner-container .wp-block-columns .paragraphe-slider {
+  width: 600px;
+  height: 378px;
+  size: 15px;
+  line-height: 29px;
+  font-weight: 400;
+}
+.wp-block-group .wp-block-group__inner-container .wp-block-columns .alignnormal {
+  margin-left: 160px;
+  width: 530px;
+  height: auto;
+  margin-left: 160px;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=front-page.css.map */
