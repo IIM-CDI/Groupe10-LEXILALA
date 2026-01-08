@@ -23,9 +23,7 @@ function theme_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_assets' );
 
-/**
- * Fallback menu: affiche des liens vers les catégories "Jeux" et "Ressources" si aucun menu n'est défini.
- */
+
 function lexilala_primary_menu_fallback() {
   $cats = array( 'Jeux', 'Ressources' );
   echo '<ul class="nav-menu">';
@@ -104,3 +102,24 @@ add_action('wp_enqueue_scripts', 'enqueue_jeu_histoire_styles');
 
 
 
+function theme_enqueue_styles() {
+
+    // CSS global
+    wp_enqueue_style(
+        'theme-main-style',
+        get_template_directory_uri() . '/assets/dist/main.css',
+        [],
+        filemtime( get_template_directory() . '/assets/dist/main.css' )
+    );
+
+    // CSS spécifique à la front page
+    if ( is_front_page() ) {
+        wp_enqueue_style(
+            'theme-front-page-style',
+            get_template_directory_uri() . '/assets/dist/front-page.css',
+            [],
+            filemtime( get_template_directory() . '/assets/dist/front-page.css' )
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');

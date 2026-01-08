@@ -1,11 +1,10 @@
 <footer class="site-footer">
 
-  <!-- NEWSLETTER -->
   <section class="footer-newsletter">
     <div class="newsletter-container">
 
       <h2>
-        Abonnez-vous à Lexilala pour ne rien manquer<br>
+        Abonnez-vous à Dulala pour ne rien manquer<br>
         sur les nouveautés
       </h2>
 
@@ -27,38 +26,50 @@
         <div class="form-consent">
           <input type="checkbox" id="consent">
           <label for="consent">
-            J’accepte de recevoir vos e-mails et confirme avoir pris connaissance
+            J'accepte de recevoir vos e-mails et confirme avoir pris connaissance
             de votre politique de confidentialité et mentions légales.
             Je comprends que je peux me désabonner à tout moment
           </label>
         </div>
 
         <button type="submit" class="newsletter-button">
-          S’abonner
+          S'abonner
         </button>
       </form>
 
     </div>
   </section>
 
-  <!-- SOCIAL -->
   <section class="footer-social">
     <div class="social-icons">
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="#" aria-label="YouTube">YouTube</a>
-      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" aria-label="Instagram" class="social-icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ICON_INSTAGRAM.svg" alt="Instagram">
+      </a>
+      <a href="#" aria-label="YouTube" class="social-icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ICON_YOUTUBE.svg" alt="YouTub">
+      </a>
+      <a href="#" aria-label="LinkedIn" class="social-icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ICON_LINKEDIN.svg" alt="LinkedIn">
+      </a>
     </div>
   </section>
 
-  <!-- FOOTER MAIN -->
   <section class="footer-main">
     <div class="footer-container">
 
       <div class="footer-brand">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-footer.svg" alt="Lexilala">
+        <?php
+          $logo_url = get_template_directory_uri() . '/assets/images/LOGO.svg';
+          $logo_file = get_template_directory() . '/assets/images/LOGO.svg';
+        ?>
+        <?php if ( file_exists( $logo_file ) ) : ?>
+          <img class="footer-logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
+        <?php else : ?>
+          <img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/wp-content/themes/Lexilala/LOGO.svg" alt="Lexilala">
+        <?php endif; ?>
         <p>
           Ces contenus sont mis à disposition selon les termes de la Licence Creative Commons Attribution -
-          Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 3.0 France.
+          Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 3.0 France.
         </p>
       </div>
 
@@ -96,3 +107,4 @@
 <?php wp_footer(); ?>
 </body>
 </html>
+

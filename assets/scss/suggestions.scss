@@ -1,0 +1,50 @@
+main {
+  //   background-color: white;
+
+  .wp-block-image {
+    align-items: center;
+
+    .wp-image-70 {
+      width: 400px;
+      height: auto;
+      margin-top: 50px;
+      margin-left: 622px;
+    }
+  }
+
+  .livres {
+    background-color: white;
+    margin-left: 100px;
+  }
+
+//   .wp-block-image.image-test {
+//     background-color: rgb(168, 24, 24);
+//     position: relative;
+//     padding: 10px;
+//     margin: 20px;
+//     display: inline-block;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+//     &::after {
+//       content: "Bibliographie";
+//       position: absolute;
+//       bottom: -20px;
+//       left: 0;
+//       right: 0;
+//       background-color: white;
+//       text-align: center;
+//       padding: 5px;
+//       border: 1px solid #ccc;
+//     }
+//   }
+
+  .education {
+    background-color: white;
+    margin-left: 100px;
+  }
+
+  .documents {
+    background-color: white;
+    margin-left: 100px;
+  }
+}
