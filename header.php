@@ -37,7 +37,9 @@
     <div class="language-switch">
       <div class="lang">
         <span class="current-lang">Français</span>
-        <span class="arrow">▾</span>
+        <span class="arrow">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/FLECHE.svg" alt="Flèche vers le bas">
+        </span>
       </div>
     </div>
 
