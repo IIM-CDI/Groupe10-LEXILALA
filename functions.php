@@ -15,7 +15,7 @@ if ( ! function_exists( 'lexilala_setup' ) ) {
 
 function theme_enqueue_assets() {
   wp_enqueue_style(
-    'theme-main-style',
+    'jeu-histoire-css',
     get_template_directory_uri() . '/assets/dist/main.css',
     array(),
     '1.0'
@@ -50,6 +50,57 @@ function lexilala_enqueue_fonts() {
   );
 }
 add_action( 'wp_enqueue_scripts', 'lexilala_enqueue_fonts' );
+
+add_action('wp_ajax_new_story_post', 'get_new_story');
+add_action('wp_ajax_nopriv_new_story_post', 'get_new_story');
+
+function get_new_story() {
+    $query = new WP_Query(array(
+        'post_type'      => 'post',
+        'posts_per_page' => 1,
+        'orderby'        => 'rand',
+		'cat_id' => 2
+    ));
+
+    if ($query->have_posts()) {
+        $query->the_post();
+        echo '<p>' . apply_filters('the_content', get_the_content()) . '</p>';
+        wp_reset_postdata();
+    }
+
+    wp_die();
+}
+
+function enqueue_new_story_script() {
+    wp_enqueue_script(
+        'new-story-js',
+        get_template_directory_uri() . '/assets/js/jeu-histoire.js',
+        array('jquery'),
+        null,
+        true
+    );
+
+    wp_localize_script('new-story-js', 'ajaxData', array(
+        'ajaxUrl' => admin_url('admin-ajax.php')
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_new_story_script');
+
+function enqueue_jeu_histoire_styles() {
+
+    if (is_page_template('jeu-histoire.php')) {
+        wp_enqueue_style(
+            'theme-main-style',
+            get_template_directory_uri() . '/assets/dist/jeu-histoire.css',
+            array(),
+            null
+        );
+    }
+
+}
+add_action('wp_enqueue_scripts', 'enqueue_jeu_histoire_styles');
+
+
 
 function theme_enqueue_styles() {
 
