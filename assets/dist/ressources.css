@@ -1,14 +1,1 @@
-main {
-  background-color: white;
-}
-main .wp-block-image {
-  align-items: center;
-}
-main .wp-block-image .wp-image-73 {
-  width: 400px;
-  height: auto;
-  margin-top: 50px;
-  margin-left: 622px;
-}
-
-/*# sourceMappingURL=ressources.css.map */
+main{background-color:#fff}main .wp-block-image{align-items:center}main .wp-block-image .wp-image-73{width:400px;height:auto;margin-top:50px;margin-left:622px}/*# sourceMappingURL=ressources.css.map */

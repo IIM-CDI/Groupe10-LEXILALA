@@ -15,10 +15,12 @@ endif;
 ?>
 
 <div class="new-story-wrapper">
-    <button class="new-story-btn" id="new-story-btn">Nouvelle histoire</button>
+  
 </div>
 
-    <div class="new-story-output" id="new-story-output" style="margin-top:1rem;"></div>
+    <div class="new-story-output" id="new-story-output" style="margin-top:1rem;">
+	</div>
 </div>
+
 
 <?php get_footer(); ?>
