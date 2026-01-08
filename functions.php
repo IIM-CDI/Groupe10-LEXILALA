@@ -123,3 +123,73 @@ function theme_enqueue_styles() {
     }
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+// function get_random_story_html() {
+
+//     if (
+//         !get_query_var('new_story') &&
+//         !isset($_GET['jkpdf'])
+//     ) {
+//         return '';
+//     }
+
+//     $query = new WP_Query([
+//         'post_type'      => 'post',
+//         'posts_per_page' => 1,
+//         'orderby'        => 'rand',
+//         'cat_id'         => 2
+//     ]);
+
+//     if ($query->have_posts()) {
+//         $query->the_post();
+//         $html = '<p>' . apply_filters('the_content', get_the_content()) . '</p>';
+//         wp_reset_postdata();
+//         return $html;
+//     }
+
+//     return '';
+// }
+
+// add_filter('query_vars', function ($vars) {
+//     $vars[] = 'new_story';
+//     return $vars;
+// });
+
+add_shortcode('jk_story', function () {
+
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (isset($_GET['jkpdf']) && isset($_SESSION['jk_story_id'])) {
+        $post_id = $_SESSION['jk_story_id'];
+        return '<p class="story">'
+            . apply_filters('the_content', get_post_field('post_content', $post_id))
+            . '</p>';
+    }
+
+    if (!isset($_SESSION['jk_story_id']) || isset($_POST['new_story'])) {
+        $query = new WP_Query([
+            'post_type' => 'post',
+            'posts_per_page' => 1,
+            'orderby' => 'rand',
+            'cat' => 2,
+        ]);
+
+        if ($query->have_posts()) {
+            $query->the_post();
+            $_SESSION['jk_story_id'] = get_the_ID();
+            wp_reset_postdata();
+        } else {
+            return '<p>No post found</p>';
+        }
+    }
+
+    $post_id = $_SESSION['jk_story_id'];
+    return '<p>'
+        . apply_filters('the_content', get_post_field('post_content', $post_id))
+        . '</p>';
+});
+
+
+

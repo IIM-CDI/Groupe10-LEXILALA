@@ -179,6 +179,7 @@
   justify-content: center;
   gap: 32px;
 }
+
 .footer-main {
   background: #f4f4eb;
   padding: 80px 40px;
@@ -223,89 +224,159 @@
   font-size: 14px;
 }
 
-main {
-  font-family: "Noto Sans", sans-serif;
-  background-color: white;
+.lexilala-language-selector {
+  font-size: 20px;
 }
 
-.wp-block-image {
-  align-items: center;
+.lexilala-card-game {
+  margin: 15px;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.wp-block-image .wp-image-29 {
-  width: 424px;
-  height: 106px;
-  margin-top: 50px;
-  margin-left: 622px;
-}
-
-.has-text-align-center {
-  color: black;
-  width: 710px;
-  margin-top: 30px;
-  margin-left: 490px;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 28px;
-}
-.has-text-align-center strong {
-  color: #839c16;
-}
-
-.wp-block-search {
+.lexilala-card-game .game-nav {
   display: flex;
+  justify-content: space-evenly;
+  width: 100vh;
+}
+.lexilala-card-game .lexilala-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(2, 200px);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 30px;
+  width: fit-content;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 80px;
-  width: 1000px;
-  height: 61px;
-  margin-left: 350px;
+  justify-self: center;
+  background-color: #fdfff4;
 }
-.wp-block-search .wp-block-search__inside-wrapper {
-  width: 700px;
-  height: 56px;
-  border: 5px solid #a2bf1a;
-  border-radius: 40px;
-  padding: 0 20px;
-  width: 954px;
-  height: 61px;
-  align-items: center;
-}
-.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input {
-  border: none;
-  outline: none;
-  flex: 1;
-  font-size: 16px;
-  padding-left: 12px;
-}
-.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button {
-  background: none;
-  border: none;
+.lexilala-card-game .lexilala-cards .lexilala-card {
+  justify-items: center;
   cursor: pointer;
 }
+.lexilala-card-game .lexilala-cards .lexilala-card.flipped .lexilala-card-inner {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  transform: rotateY(180deg);
+}
 
-.wp-block-group {
-  background-color: #f1f2e8;
+.lexilala-card-front,
+.lexilala-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 32px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 10px;
+  height: 150px;
+  width: 200px;
+  transform-origin: center center;
 }
-.wp-block-group .titre-how-use {
-  background-color: #f1f2e8;
-  font-size: 33px;
-  font-weight: 700;
-  padding: 70px 0 20px 0;
-  margin: 0;
+
+.lexilala-card-front img {
   width: 100%;
-  box-sizing: border-box;
+  height: 100%;
 }
-.wp-block-group #texte2 {
-  background-color: #f1f2e8;
-  line-height: 1.6;
-  padding: 50px;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
+
+.lexilala-card-back {
+  transform: rotateY(180deg);
+  font-weight: bold;
+  transform-origin: center center;
 }
-.wp-block-group #texte2 .conteneur {
-  max-width: 800px;
-  margin: 0 auto;
+
+.reload-btn {
+  background-color: #A2BF1A;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+}
+.reload-btn:hover {
+  text-decoration: none;
+  background-color: #849c13;
+}
+
+select {
+  border: none;
+  background: #fff;
+  padding: 10px;
+  transition: 0.4s;
+  border-radius: 7px;
+}
+
+.jeu-histoire-wrapper {
+  background: linear-gradient(#839c16 0 20px, rgba(220, 230, 183, 0.262745098) 10px);
+  font-family: "Noto Sans", sans-serif;
+  margin: 10px 0 30px 0;
+  padding: 40px;
+  justify-self: center;
+  justify-items: center;
+  width: fit-content;
+  border-radius: 15px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 850px;
+}
+
+.wp-block-heading has-text-align-center jeu-histoire-title {
+  font-size: 30px !important;
+  text-align: center !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.new-story-btn, .dkpdf-button {
+  background-color: #a8c61a;
+  color: white;
+  text-decoration: none;
+  border-radius: 37px;
+  font-size: 15px;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 30px;
+}
+.new-story-btn:hover, .dkpdf-button:hover {
+  text-decoration: none;
+  background-color: #849c13;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.new-story-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-story-output {
+  max-width: 450px;
+  display: flex;
+  justify-self: center;
+}
+
+.new-story-output p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.story {
+  max-width: 450px;
+}
+
+br {
+  display: none;
 }
 
 main {
