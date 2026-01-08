@@ -2,8 +2,8 @@
 <main>
     <?php
         $query = new WP_Query(array(
-            'post_type' => 'suggestions',
-            'p' => 46, // ID du post "Vos suggestions"
+            'post_type' => 'accueil',
+            'p' => 72, // ID du post "Ressources"
         ));
 
         if ($query->have_posts()):

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-<main>
+<main class="a-propos-main">
     <?php
         $query = new WP_Query(array(
-            'post_type' => 'accueil',
-            'p' => 55, // ID du post "Vos suggestions"
+            'post_type' => 'A propos',
+            'p' => 55, // ID du post "A propos"
         ));
 
         if ($query->have_posts()):

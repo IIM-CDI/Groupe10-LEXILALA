@@ -1,6 +1,6 @@
 main {
   font-family: "Noto Sans", sans-serif;
-  color: black;
+  background-color: white;
 }
 
 .wp-block-image {
@@ -63,26 +63,30 @@ main {
   }
 }
 
-.titre-how-use {
+.wp-block-group {
   background-color: #f1f2e8;
-  font-size: 33px;
-  font-weight: 700;
-  padding: 70px 0 20px 0;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
 
-#texte2 {
-  background-color: #f1f2e8;
-  line-height: 1.6;
-  padding: 50px;
-  margin: 0; 
-  width: 100%;
-  box-sizing: border-box;
-}
+  .titre-how-use {
+    background-color: #f1f2e8;
+    font-size: 33px;
+    font-weight: 700;
+    padding: 70px 0 20px 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-#texte2 .conteneur {
-  max-width: 800px;
-  margin: 0 auto; 
+  #texte2 {
+    background-color: #f1f2e8;
+    line-height: 1.6;
+    padding: 50px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #texte2 .conteneur {
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }

@@ -226,7 +226,7 @@
 
 main {
   font-family: "Noto Sans", sans-serif;
-  color: black;
+  background-color: white;
 }
 
 .wp-block-image {
@@ -284,7 +284,10 @@ main {
   cursor: pointer;
 }
 
-.titre-how-use {
+.wp-block-group {
+  background-color: #f1f2e8;
+}
+.wp-block-group .titre-how-use {
   background-color: #f1f2e8;
   font-size: 33px;
   font-weight: 700;
@@ -293,8 +296,7 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-
-#texte2 {
+.wp-block-group #texte2 {
   background-color: #f1f2e8;
   line-height: 1.6;
   padding: 50px;
@@ -302,10 +304,124 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-
-#texte2 .conteneur {
+.wp-block-group #texte2 .conteneur {
   max-width: 800px;
   margin: 0 auto;
+}
+
+main {
+  font-family: "Noto Sans", sans-serif;
+}
+main .wp-block-heading {
+  background-color: #f1f2e8;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 70px;
+  margin-bottom: 50px;
+  margin-right: 100px;
+}
+main .wp-block-image.dulala,
+main .wp-block-image.kamilala,
+main .wp-block-image.lexilala {
+  background-color: #f1f2e8;
+  display: inline-flex;
+  margin-top: 30px;
+  margin-left: 165px;
+}
+main .dulala,
+main .kamilala,
+main .lexilala {
+  max-height: 120px;
+}
+main .texte1 {
+  background-color: #f1f2e8;
+  max-width: 900px;
+  font-size: 15px;
+  line-height: 26px;
+  margin-left: 410px;
+  margin-top: 80px;
+}
+main .wp-block-image.icare,
+main .wp-block-image.labex {
+  background-color: #f1f2e8;
+  display: inline-flex;
+  margin-top: 110px;
+}
+main .wp-block-image.icare {
+  margin-left: 110px;
+}
+main .wp-block-image.labex {
+  margin-left: 480px;
+}
+main .titre2 {
+  background-color: white;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 100px;
+  margin-left: 500px;
+}
+main .paragraph2 {
+  background-color: white;
+  max-width: 900px;
+  font-size: 15px;
+  line-height: 26px;
+  margin-top: 50px;
+  margin-left: 410px;
+}
+main .wp-block-image.rep-fr,
+main .wp-block-image.fondation,
+main .wp-block-image.fonjep,
+main .wp-block-image.pierre,
+main .wp-block-image.carasso {
+  background-color: white;
+  display: inline-flex;
+  margin-top: 80px;
+  margin-left: 80px;
+}
+main p .paragraph3,
+main p .paragraph4,
+main p .paragraph5 {
+  background-color: white;
+  display: inline-flex;
+}
+main h1 {
+  background-color: white;
+}
+
+main .wp-block-image {
+  align-items: center;
+}
+main .wp-block-image .wp-image-70 {
+  width: 400px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 622px;
+}
+main .livres {
+  background-color: white;
+  margin-left: 100px;
+}
+main .education {
+  background-color: white;
+  margin-left: 100px;
+}
+main .documents {
+  background-color: white;
+  margin-left: 100px;
+}
+
+main {
+  background-color: white;
+}
+main .wp-block-image {
+  align-items: center;
+}
+main .wp-block-image .wp-image-73 {
+  width: 400px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 622px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 main {
   font-family: "Noto Sans", sans-serif;
-  color: black;
+  background-color: white;
 }
 
 .wp-block-image {
@@ -58,7 +58,10 @@ main {
   cursor: pointer;
 }
 
-.titre-how-use {
+.wp-block-group {
+  background-color: #f1f2e8;
+}
+.wp-block-group .titre-how-use {
   background-color: #f1f2e8;
   font-size: 33px;
   font-weight: 700;
@@ -67,8 +70,7 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-
-#texte2 {
+.wp-block-group #texte2 {
   background-color: #f1f2e8;
   line-height: 1.6;
   padding: 50px;
@@ -76,8 +78,7 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-
-#texte2 .conteneur {
+.wp-block-group #texte2 .conteneur {
   max-width: 800px;
   margin: 0 auto;
 }
