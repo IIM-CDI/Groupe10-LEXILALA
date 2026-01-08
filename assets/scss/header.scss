@@ -1,7 +1,7 @@
 .site-header {
   width: 100%;
   background: #fff;
-  padding: 20px 0; 
+  padding: 20px 0;
 
   .header-container {
     background-color: #fff;
@@ -14,8 +14,8 @@
     justify-content: space-between;
   }
 
-  /* LOGO */
   .site-branding {
+    //logo
     max-width: 280px;
 
     img {
@@ -25,7 +25,6 @@
     }
   }
 
-  /* NAV PRINCIPALE */
   .site-navigation {
     background-color: #839c16;
     border-radius: 10px;
@@ -82,7 +81,6 @@
     overflow: hidden;
     cursor: pointer;
     margin-right: 50px;
-    
 
     .lang {
       background-color: #fff;
@@ -91,6 +89,10 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       font-family: "Noto Sans", sans-serif;
+
+      .arrow {
+        margin-left: 10px;
+      }
     }
   }
 }
