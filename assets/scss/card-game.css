@@ -1,0 +1,178 @@
+.lexilala-language-selector {
+  font-size: 20px;
+}
+
+.lexilala-card-game {
+  position: relative;
+  width: 100vh;
+  height: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 30px;
+}
+
+.lexilala-card-game .game-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100vh;
+  margin: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lexilala-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[4];
+      grid-template-columns: repeat(4, 250px);
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+  padding: 20px;
+  margin: 30px;
+}
+
+.lexilala-card {
+  width: 200px;
+  height: 150px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.lexilala-card.flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.lexilala-card-front,
+.lexilala-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 5px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.lexilala-card-front {
+  background: white;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.lexilala-card-front img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+  /* optional, keeps image corners rounded inside card */
+}
+
+.lexilala-card-back {
+  background: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  /* rounded back */
+}
+
+.reload-btn {
+  background-color: #A2BF1A;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.reload-btn:hover {
+  background-color: #849c13;
+}
+
+select {
+  border: none;
+  background: #fff;
+  padding: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 7px;
+}
+
+.lexilala-card-front img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .lexilala-card-game {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .lexilala-card-game .game-nav {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .lexilala-cards {
+    -ms-grid-columns: (120px)[2];
+        grid-template-columns: repeat(2, 120px);
+  }
+}
+
+@media (max-width: 480px) {
+  .lexilala-cards {
+    -ms-grid-columns: (100px)[2];
+        grid-template-columns: repeat(2, 100px);
+  }
+  .lexilala-card {
+    width: 100px;
+    height: 140px;
+  }
+  .lexilala-card-back {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=card-game.css.map */

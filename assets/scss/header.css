@@ -18,11 +18,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .site-header .site-branding {
@@ -39,7 +39,7 @@
   background-color: #839c16;
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   margin-left: 180px;
 }
 
@@ -92,7 +92,7 @@
   font-weight: 600;
   font-size: 18px;
   -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   cursor: pointer;
   margin-right: 50px;
@@ -114,19 +114,17 @@
 @media (max-width: 1024px) {
   .site-header .header-container {
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 20px;
   }
   .site-header .site-navigation {
     -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
+        -ms-flex-order: 3;
+            order: 3;
     width: 100%;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
-
-
 /*# sourceMappingURL=header.css.map */
