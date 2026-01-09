@@ -12,9 +12,13 @@
   width: 850px;
 }
 
-.wp-block-heading has-text-align-center jeu-histoire-title{
+
+
+.jeu-histoire-title{
 	font-size: 30px !important;
 	text-align: center !important;
+	margin: 30px;
+	background-color: none;
 }
 
 .hidden {
@@ -71,5 +75,9 @@
 
 br{
 	display: none;
+}
+
+.jeu-histoire-subtitle{
+	margin:30px;
 }
 

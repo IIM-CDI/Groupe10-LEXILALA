@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .site-header {
   width: 100%;
   background: #fff;
@@ -229,66 +234,81 @@
 }
 
 .lexilala-card-game {
-  margin: 15px;
-  padding: 30px;
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: auto;
+  justify-self: center;
+  margin: 30px;
 }
+
 .lexilala-card-game .game-nav {
   display: flex;
   justify-content: space-evenly;
   width: 100vh;
+  margin: 20px;
+  align-items: center;
 }
-.lexilala-card-game .lexilala-cards {
+
+.lexilala-cards {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: repeat(2, 200px);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  padding: 30px;
-  width: fit-content;
+  grid-template-columns: repeat(4, 250px);
+  gap: 20px;
   justify-content: center;
-  justify-self: center;
-  background-color: #fdfff4;
+  perspective: 1500px;
+  padding: 20px;
+  margin: 30px;
 }
-.lexilala-card-game .lexilala-cards .lexilala-card {
-  justify-items: center;
-  cursor: pointer;
-}
-.lexilala-card-game .lexilala-cards .lexilala-card.flipped .lexilala-card-inner {
-  width: 100%;
+
+.lexilala-card {
+  width: 200px;
+  height: 150px;
+  position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.lexilala-card.flipped {
   transform: rotateY(180deg);
 }
 
 .lexilala-card-front,
 .lexilala-card-back {
   position: absolute;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  font-size: 32px;
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  background: #fff;
+}
+
+.lexilala-card-front {
+  background: white;
   padding: 10px;
-  height: 150px;
-  width: 200px;
-  transform-origin: center center;
+  box-sizing: border-box;
 }
 
 .lexilala-card-front img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  border-radius: 10px; /* optional, keeps image corners rounded inside card */
 }
 
 .lexilala-card-back {
+  background: white;
   transform: rotateY(180deg);
+  font-size: 20px;
   font-weight: bold;
-  transform-origin: center center;
+  border-radius: 10px; /* rounded back */
 }
 
 .reload-btn {
@@ -300,9 +320,10 @@
   font-size: 30px;
   padding: 10px;
   border: none;
+  cursor: pointer;
 }
+
 .reload-btn:hover {
-  text-decoration: none;
   background-color: #849c13;
 }
 
@@ -314,6 +335,40 @@ select {
   border-radius: 7px;
 }
 
+.lexilala-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .lexilala-card-game {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .lexilala-card-game .game-nav {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 768px) {
+  .lexilala-cards {
+    grid-template-columns: repeat(2, 120px);
+  }
+}
+@media (max-width: 480px) {
+  .lexilala-cards {
+    grid-template-columns: repeat(2, 100px);
+  }
+  .lexilala-card {
+    width: 100px;
+    height: 140px;
+  }
+  .lexilala-card-back {
+    font-size: 18px;
+  }
+}
 .jeu-histoire-wrapper {
   background: linear-gradient(#839c16 0 20px, rgba(220, 230, 183, 0.262745098) 10px);
   font-family: "Noto Sans", sans-serif;
@@ -327,9 +382,11 @@ select {
   width: 850px;
 }
 
-.wp-block-heading has-text-align-center jeu-histoire-title {
+.jeu-histoire-title {
   font-size: 30px !important;
   text-align: center !important;
+  margin: 30px;
+  background-color: none;
 }
 
 .hidden {
@@ -377,6 +434,10 @@ select {
 
 br {
   display: none;
+}
+
+.jeu-histoire-subtitle {
+  margin: 30px;
 }
 
 main {

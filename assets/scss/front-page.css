@@ -1,0 +1,105 @@
+main {
+  font-family: "Noto Sans", sans-serif;
+  background-color: white;
+}
+
+.wp-block-image {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wp-block-image .wp-image-29 {
+  width: 424px;
+  height: 106px;
+  margin-top: 50px;
+  margin-left: 622px;
+}
+
+.has-text-align-center {
+  color: black;
+  width: 710px;
+  margin-top: 30px;
+  margin-left: 490px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.has-text-align-center strong {
+  color: #839c16;
+}
+
+.wp-block-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 1000px;
+  height: 61px;
+  margin-left: 350px;
+}
+
+.wp-block-search .wp-block-search__inside-wrapper {
+  width: 700px;
+  height: 56px;
+  border: 5px solid #a2bf1a;
+  border-radius: 40px;
+  padding: 0 20px;
+  width: 954px;
+  height: 61px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input {
+  border: none;
+  outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 16px;
+  padding-left: 12px;
+}
+
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wp-block-group {
+  background-color: #f1f2e8;
+}
+
+.wp-block-group .titre-how-use {
+  background-color: #f1f2e8;
+  font-size: 33px;
+  font-weight: 700;
+  padding: 70px 0 20px 0;
+  margin: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wp-block-group #texte2 {
+  background-color: #f1f2e8;
+  line-height: 1.6;
+  padding: 50px;
+  margin: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wp-block-group #texte2 .conteneur {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=front-page.css.map */
