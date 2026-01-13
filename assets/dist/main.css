@@ -284,11 +284,7 @@ main {
   cursor: pointer;
 }
 
-.wp-block-group {
-  background-color: #f1f2e8;
-}
 .wp-block-group .titre-how-use {
-  background-color: #f1f2e8;
   font-size: 33px;
   font-weight: 700;
   padding: 70px 0 20px 0;
@@ -296,103 +292,219 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-.wp-block-group #texte2 {
-  background-color: #f1f2e8;
-  line-height: 1.6;
-  padding: 50px;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
+.wp-block-group .wp-block-group__inner-container {
+  padding-bottom: 50px;
 }
-.wp-block-group #texte2 .conteneur {
-  max-width: 800px;
-  margin: 0 auto;
+.wp-block-group .wp-block-group__inner-container .wp-block-columns {
+  margin-top: 40px;
+  margin-left: 190px;
+  width: 1194px;
+  height: 378px;
+}
+.wp-block-group .wp-block-group__inner-container .wp-block-columns .paragraphe-slider {
+  width: 600px;
+  height: 378px;
+  size: 15px;
+  line-height: 29px;
+  font-weight: 400;
+}
+.wp-block-group .wp-block-group__inner-container .wp-block-columns .alignnormal {
+  margin-left: 160px;
+  width: 530px;
+  height: auto;
+  margin-left: 160px;
+  margin-top: 15px;
+}
+.wp-block-group .wp-block-group__inner-container:has(.paragraphe-slider) {
+  background-color: #F1F2E8;
+  padding: 0px 20px 50px 0px;
 }
 
 main {
   font-family: "Noto Sans", sans-serif;
 }
-main .wp-block-heading {
+main .wp-block-group .group-propos {
   background-color: #f1f2e8;
+}
+main .wp-block-group .group-propos .wp-block-heading {
   font-size: 40px;
   font-weight: 700;
   padding-top: 70px;
-  margin-bottom: 50px;
-  margin-right: 100px;
+  margin: 0 0 50px;
+  margin-left: 510px;
+  text-align: center;
 }
-main .wp-block-image.dulala,
-main .wp-block-image.kamilala,
-main .wp-block-image.lexilala {
-  background-color: #f1f2e8;
+main .wp-block-group .group-propos .wp-block-image.dulala,
+main .wp-block-group .group-propos .wp-block-image.kamilala,
+main .wp-block-group .group-propos .wp-block-image.lexilala {
   display: inline-flex;
   margin-top: 30px;
-  margin-left: 165px;
+  margin-left: 170px;
 }
-main .dulala,
-main .kamilala,
-main .lexilala {
+main .wp-block-group .group-propos .dulala,
+main .wp-block-group .group-propos .kamilala,
+main .wp-block-group .group-propos .lexilala {
   max-height: 120px;
 }
-main .texte1 {
-  background-color: #f1f2e8;
+main .wp-block-group .group-propos .texte1 {
   max-width: 900px;
   font-size: 15px;
   line-height: 26px;
   margin-left: 410px;
   margin-top: 80px;
 }
-main .wp-block-image.icare,
-main .wp-block-image.labex {
-  background-color: #f1f2e8;
+main .wp-block-group .group-propos .wp-block-image.icare,
+main .wp-block-group .group-propos .wp-block-image.labex {
   display: inline-flex;
   margin-top: 110px;
 }
-main .wp-block-image.icare {
+main .wp-block-group .group-propos .wp-block-image.icare {
   margin-left: 110px;
 }
-main .wp-block-image.labex {
+main .wp-block-group .group-propos .wp-block-image.labex {
   margin-left: 480px;
 }
-main .titre2 {
-  background-color: white;
-  width: 100%;
-  font-size: 30px;
-  font-weight: 700;
-  margin-top: 100px;
-  margin-left: 500px;
+main {
+  /* Styling for the Qui sommes-nous and Remerciements sections */
 }
-main .paragraph2 {
-  background-color: white;
+main .group-apropos {
   max-width: 900px;
+  margin: 0 auto;
+  padding: 0px 0px;
+}
+main .wp-block-group__inner-container {
+  width: 100%;
+}
+main {
+  /* Remerciements section title */
+}
+main #titre-2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+main {
+  /* Ensure other possible selectors for title are centered */
+}
+main .titre2,
+main .group-apropos .wp-block-heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  /* Paragraphs in the section */
+}
+main #paragraphe2 {
   font-size: 15px;
-  line-height: 26px;
-  margin-top: 50px;
-  margin-left: 410px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: left;
+}
+main {
+  /* Names section - three column layout */
+}
+main .group-fin-propos {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  padding: 40px 20px;
+  line-height: 30px;
+  clear: both;
+  overflow: hidden;
 }
 main .wp-block-image.rep-fr,
 main .wp-block-image.fondation,
 main .wp-block-image.fonjep,
 main .wp-block-image.pierre,
 main .wp-block-image.carasso {
-  background-color: white;
   display: inline-flex;
-  margin-top: 80px;
+  margin-top: 0px;
   margin-left: 80px;
-}
-main p .paragraph3,
-main p .paragraph4,
-main p .paragraph5 {
-  background-color: white;
-  display: inline-flex;
-}
-main h1 {
-  background-color: white;
 }
 
 main .wp-block-image {
   align-items: center;
 }
 main .wp-block-image .wp-image-70 {
+  width: 400px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 622px;
+}
+main .happyforms-form {
+  max-width: 1100px;
+  height: 720px;
+  margin: 60px 0 60px 230px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  padding: 60px;
+  position: relative;
+}
+main .happyforms-form::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  background: linear-gradient(90deg, #6c8a10, #53700d);
+  border-radius: 14px 14px 0 0;
+}
+main .happyforms-form__part {
+  margin-bottom: 22px;
+}
+main .happyforms-input input,
+main textarea {
+  width: 100%;
+  padding: 18px 22px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid #97a62c;
+  outline: none;
+  background: white;
+}
+main .happyforms-input input {
+  height: 56px;
+}
+main textarea {
+  min-height: 380px;
+  resize: vertical;
+}
+main .happyforms-input input::placeholder,
+main textarea::placeholder {
+  color: #bdbdbd;
+  font-weight: 700;
+  font-size: 18px;
+}
+main .happyforms-input input:focus,
+main textarea:focus {
+  border-color: #6c8a10;
+  box-shadow: 0 4px 14px rgba(108, 138, 16, 0.18);
+}
+main .happyforms-part--submit {
+  text-align: center;
+  margin-top: 10px;
+}
+main .happyforms-submit {
+  background: #839C16;
+  color: white;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+main {
+  background-color: white;
+}
+main .wp-block-image {
+  align-items: center;
+}
+main .wp-block-image .wp-image-73 {
   width: 400px;
   height: auto;
   margin-top: 50px;
@@ -409,19 +521,6 @@ main .education {
 main .documents {
   background-color: white;
   margin-left: 100px;
-}
-
-main {
-  background-color: white;
-}
-main .wp-block-image {
-  align-items: center;
-}
-main .wp-block-image .wp-image-73 {
-  width: 400px;
-  height: auto;
-  margin-top: 50px;
-  margin-left: 622px;
 }
 
 /*# sourceMappingURL=main.css.map */

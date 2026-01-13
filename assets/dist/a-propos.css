@@ -1,81 +1,105 @@
 main {
   font-family: "Noto Sans", sans-serif;
 }
-main .wp-block-heading {
+main .wp-block-group .group-propos {
   background-color: #f1f2e8;
+}
+main .wp-block-group .group-propos .wp-block-heading {
   font-size: 40px;
   font-weight: 700;
   padding-top: 70px;
-  margin-bottom: 50px;
-  margin-right: 100px;
+  margin: 0 0 50px;
+  margin-left: 510px;
+  text-align: center;
 }
-main .wp-block-image.dulala,
-main .wp-block-image.kamilala,
-main .wp-block-image.lexilala {
-  background-color: #f1f2e8;
+main .wp-block-group .group-propos .wp-block-image.dulala,
+main .wp-block-group .group-propos .wp-block-image.kamilala,
+main .wp-block-group .group-propos .wp-block-image.lexilala {
   display: inline-flex;
   margin-top: 30px;
-  margin-left: 165px;
+  margin-left: 170px;
 }
-main .dulala,
-main .kamilala,
-main .lexilala {
+main .wp-block-group .group-propos .dulala,
+main .wp-block-group .group-propos .kamilala,
+main .wp-block-group .group-propos .lexilala {
   max-height: 120px;
 }
-main .texte1 {
-  background-color: #f1f2e8;
+main .wp-block-group .group-propos .texte1 {
   max-width: 900px;
   font-size: 15px;
   line-height: 26px;
   margin-left: 410px;
   margin-top: 80px;
 }
-main .wp-block-image.icare,
-main .wp-block-image.labex {
-  background-color: #f1f2e8;
+main .wp-block-group .group-propos .wp-block-image.icare,
+main .wp-block-group .group-propos .wp-block-image.labex {
   display: inline-flex;
   margin-top: 110px;
 }
-main .wp-block-image.icare {
+main .wp-block-group .group-propos .wp-block-image.icare {
   margin-left: 110px;
 }
-main .wp-block-image.labex {
+main .wp-block-group .group-propos .wp-block-image.labex {
   margin-left: 480px;
 }
-main .titre2 {
-  background-color: white;
-  width: 100%;
-  font-size: 30px;
-  font-weight: 700;
-  margin-top: 100px;
-  margin-left: 500px;
+main {
+  /* Styling for the Qui sommes-nous and Remerciements sections */
 }
-main .paragraph2 {
-  background-color: white;
+main .group-apropos {
   max-width: 900px;
+  margin: 0 auto;
+  padding: 0px 0px;
+}
+main .wp-block-group__inner-container {
+  width: 100%;
+}
+main {
+  /* Remerciements section title */
+}
+main #titre-2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+main {
+  /* Ensure other possible selectors for title are centered */
+}
+main .titre2,
+main .group-apropos .wp-block-heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  /* Paragraphs in the section */
+}
+main #paragraphe2 {
   font-size: 15px;
-  line-height: 26px;
-  margin-top: 50px;
-  margin-left: 410px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: left;
+}
+main {
+  /* Names section - three column layout */
+}
+main .group-fin-propos {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  padding: 40px 20px;
+  line-height: 30px;
+  clear: both;
+  overflow: hidden;
 }
 main .wp-block-image.rep-fr,
 main .wp-block-image.fondation,
 main .wp-block-image.fonjep,
 main .wp-block-image.pierre,
 main .wp-block-image.carasso {
-  background-color: white;
   display: inline-flex;
-  margin-top: 80px;
+  margin-top: 0px;
   margin-left: 80px;
-}
-main p .paragraph3,
-main p .paragraph4,
-main p .paragraph5 {
-  background-color: white;
-  display: inline-flex;
-}
-main h1 {
-  background-color: white;
 }
 
 /*# sourceMappingURL=a-propos.css.map */
